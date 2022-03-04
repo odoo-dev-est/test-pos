@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <!-- Discount Button -->
+    <t t-name="BtnDiscount">
+        <div class='control-button'>
+            <i class='fa fa-gift' /> 5% discount
+        </div>
+    </t>
+    
+    <!-- Print Receipt Button -->
+    <t t-extend="ReceiptScreenWidget">
+        <t t-jquery='div.receipt-screen.screen > div > div.centered-content.touch-scrollable > div.button.print' t-operation="replace">
+            <div class="button print_api_button">
+                <i class='fa fa-print'></i> Print Receipt
+            </div>
+        </t>
+    </t>
+
+</templates>
