@@ -176,7 +176,7 @@ odoo.define('pos_demo.custom', function (require) {
             const options = {
                 method: 'POST',
                 headers: {
-                  //'Access-Control-Allow-Origin': '*',
+                  'Access-Control-Allow-Origin': '*',
                   'accept': 'application/json',
                   'Content-Type': 'application/json'
                 },
