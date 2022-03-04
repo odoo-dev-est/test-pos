@@ -120,6 +120,7 @@ odoo.define('pos_demo.custom', function (require) {
               partialPay = null;
                 
                 if(change > 0){
+                    partialPay = [];
                     for(let pm_index =0; pm_index < payment_methods.length; pm_index++){
                         for(let pl_index=0; pl_index < paymentlines.length; pl_index++){
                           if(paymentlines[pl_index].payment_method === payment_methods[pm_index].name){
