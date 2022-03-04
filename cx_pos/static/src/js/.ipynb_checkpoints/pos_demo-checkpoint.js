@@ -156,7 +156,7 @@ odoo.define('pos_demo.custom', function (require) {
                 }
               }
               totalPay = partialPay[partialPay.length -1].ID;
-              partialPay.splice(-1);
+             // partialPay.splice(-1);
             }
             
             
