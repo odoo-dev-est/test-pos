@@ -99,6 +99,7 @@ odoo.define('pos_demo.custom', function (require) {
             }
 
             //Set tax index registered in fiscal printed
+            let change = order_for_print.change;
             let taxes = order_for_print.tax_details;
             for(let t_index = 0; t_index < taxes.length; t_index++){
               for(let p_index = 0; p_index < products.length; p_index++){
@@ -117,6 +118,21 @@ odoo.define('pos_demo.custom', function (require) {
             if (paymentlines.length === 1){
               totalPay = paymentlines[0].payment_method;
               partialPay = null;
+                
+                if(change > 0){
+                    for(let pm_index =0; pm_index < payment_methods.length; pm_index++){
+                        for(let pl_index=0; pl_index < paymentlines.length; pl_index++){
+                          if(paymentlines[pl_index].payment_method === payment_methods[pm_index].name){
+                                partialPay.push(
+                              {
+                                ID: payment_methods[pm_index].register_id,
+                                amount: paymentlines[pl_index].amount*100
+                              }
+                            )
+                          }
+                        }
+                      }
+                }
 
               for(let pm_index =0; pm_index < payment_methods.length; pm_index++){
                 if(totalPay === payment_methods[pm_index].name){
@@ -142,7 +158,8 @@ odoo.define('pos_demo.custom', function (require) {
               partialPay.splice(-1);
             }
             
-          
+            
+            
             //Make receipt print request
             const receipt = {
                 client: {
