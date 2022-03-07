@@ -28,7 +28,7 @@ function registerPaymentMethod(){
                     throw Error(data.status);
                   }
           
-                  return data.json();
+                  return data.json() });
           
                     /*}).then(payment_method => {
                       console.log(payment_method);
