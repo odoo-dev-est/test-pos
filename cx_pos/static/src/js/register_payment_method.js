@@ -1,6 +1,6 @@
 //Register Payment method function
 function registerPaymentMethod(){
-    let payment_method_name = document.getElementsByName("name")[0].outerText;
+    /*let payment_method_name = document.getElementsByName("name")[0].outerText;
     let id = document.getElementsByName("register_id")[0].outerText;
 
     //Make payment method registration request
@@ -17,10 +17,11 @@ function registerPaymentMethod(){
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(payment_method),
-      };
+      };*/
   
-    const url = 'http://localhost:12376/orders/payments_register/';
-
+    //const url = 'http://localhost:12376/orders/payments_register/';
+    const url ='http://localhost:12376/orders/print_X_report/';
+    
     fetch(url, options)
               .then(data => {
                   if (!data.ok) {
@@ -29,12 +30,12 @@ function registerPaymentMethod(){
           
                   return data.json();
           
-                    }).then(payment_method => {
+                    /*}).then(payment_method => {
                       console.log(payment_method);
                       alert(`Payment method registered: ${payment_method_name} with id ${id}`);
 
                     }).catch(e => {
                       console.log(e);
-                    });
+                    });*/
 
 }
