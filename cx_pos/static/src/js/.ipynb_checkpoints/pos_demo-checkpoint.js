@@ -107,15 +107,15 @@ odoo.define('pos_demo.custom', function (require) {
 
             //set payment methods
             let paymentlines = order_for_print.paymentlines;
-            let totalPay = null;
+            //let totalPay = null;
             let partialPay = [];
 
-            if (paymentlines.length === 1){
+            //if (paymentlines.length === 1){
               //totalPay = paymentlines[0].payment_method;
               //partialPay = null;
                 
-                if(change >= 0){
-                    partialPay = [];
+//                 if(change >= 0){
+                    //partialPay = [];
                     for(let pm_index =0; pm_index < payment_methods.length; pm_index++){
                         for(let pl_index=0; pl_index < paymentlines.length; pl_index++){
                           if(paymentlines[pl_index].payment_method === payment_methods[pm_index].name){
@@ -128,7 +128,7 @@ odoo.define('pos_demo.custom', function (require) {
                           }
                         }
                       }
-                    }
+//                     }
 
               /*for(let pm_index =0; pm_index < payment_methods.length; pm_index++){
                 if(totalPay === payment_methods[pm_index].name){
@@ -136,7 +136,7 @@ odoo.define('pos_demo.custom', function (require) {
                 }
               }*/
 
-            } else{
+            /*} else{
 
               for(let pm_index =0; pm_index < payment_methods.length; pm_index++){
                 for(let pl_index=0; pl_index < paymentlines.length; pl_index++){
@@ -152,7 +152,7 @@ odoo.define('pos_demo.custom', function (require) {
               }
               //totalPay = partialPay[partialPay.length -1].ID;
              // partialPay.splice(-1);
-            }
+            }*/
             
             
             
@@ -181,7 +181,7 @@ odoo.define('pos_demo.custom', function (require) {
                 //   }
                 // ],
                 //totalPay: totalPay,
-                barCode: 0
+                //barCode: 0
               };
 
               
