@@ -2,12 +2,7 @@ odoo.define('pos_demo.custom', function (require) {
     "use strict";
 
     var models = require('point_of_sale.models');
-    //var core = require('web.core');
     var screens = require('point_of_sale.screens');
-    //var Widget = require('web.Widget');
-    //var ajax = require('web.ajax');
-
-    //var qweb = core.qweb;
 
     //Load printer_id and register_id fields
     models.load_fields('account.tax', ['printer_id']);
@@ -78,11 +73,11 @@ odoo.define('pos_demo.custom', function (require) {
                 }
 
                 // Default code and surcharge values. Not implemented in Odoo yet
-                let code = 0;
+                /*let code = 0;
                 let surcharge = { 
                   PerAmount: false,
                   size: 0
-                };
+                };*/
                 
                 //Convert price and quantity to values fiscal printer can accept
                 let tax = Math.round(((price_with_tax_before_discount/quantity)/price - 1)*100);
@@ -93,8 +88,8 @@ odoo.define('pos_demo.custom', function (require) {
                               quantity: quantity,
                               code:code,
                               description:product_name,
-                              discount: discount,
-                              surcharge: surcharge
+                              /*discount: discount,
+                              surcharge: surcharge*/
                             });
             }
 
