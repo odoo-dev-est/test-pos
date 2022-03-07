@@ -2,12 +2,12 @@ odoo.define('pos_demo.custom', function (require) {
     "use strict";
 
     var models = require('point_of_sale.models');
-    var core = require('web.core');
+    //var core = require('web.core');
     var screens = require('point_of_sale.screens');
-    var Widget = require('web.Widget');
-    var ajax = require('web.ajax');
+    //var Widget = require('web.Widget');
+    //var ajax = require('web.ajax');
 
-    var qweb = core.qweb;
+    //var qweb = core.qweb;
 
     //Load printer_id and register_id fields
     models.load_fields('account.tax', ['printer_id']);
@@ -133,7 +133,7 @@ odoo.define('pos_demo.custom', function (require) {
                           }
                         }
                       }
-                }
+                    }
 
               for(let pm_index =0; pm_index < payment_methods.length; pm_index++){
                 if(totalPay === payment_methods[pm_index].name){
