@@ -22,7 +22,7 @@ function registerPaymentMethod(){
     //const url = 'http://localhost:12376/orders/payments_register/';
     const url ='http://localhost:12376/orders/print_X_report/';
     
-    fetch(url, options)
+    fetch(url)
               .then(data => {
                   if (!data.ok) {
                     throw Error(data.status);
