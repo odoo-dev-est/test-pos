@@ -86,10 +86,10 @@ odoo.define('pos_demo.custom', function (require) {
                 products.push({tax:tax,
                               price:price,
                               quantity: quantity,
-                              code:code,
+                              //code:code,
                               description:product_name,
-                              /*discount: discount,
-                              surcharge: surcharge*/
+                              discount: discount,
+                              //surcharge: surcharge
                             });
             }
 
