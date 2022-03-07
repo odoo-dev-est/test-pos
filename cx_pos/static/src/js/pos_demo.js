@@ -111,10 +111,10 @@ odoo.define('pos_demo.custom', function (require) {
             let partialPay = [];
 
             if (paymentlines.length === 1){
-              totalPay = paymentlines[0].payment_method;
-              partialPay = null;
+              //totalPay = paymentlines[0].payment_method;
+              //partialPay = null;
                 
-                if(change > 0){
+                if(change >= 0){
                     partialPay = [];
                     for(let pm_index =0; pm_index < payment_methods.length; pm_index++){
                         for(let pl_index=0; pl_index < paymentlines.length; pl_index++){
@@ -130,11 +130,11 @@ odoo.define('pos_demo.custom', function (require) {
                       }
                     }
 
-              for(let pm_index =0; pm_index < payment_methods.length; pm_index++){
+              /*for(let pm_index =0; pm_index < payment_methods.length; pm_index++){
                 if(totalPay === payment_methods[pm_index].name){
                   totalPay = payment_methods[pm_index].register_id;
                 }
-              }
+              }*/
 
             } else{
 
@@ -150,7 +150,7 @@ odoo.define('pos_demo.custom', function (require) {
                   }
                 }
               }
-              totalPay = partialPay[partialPay.length -1].ID;
+              //totalPay = partialPay[partialPay.length -1].ID;
              // partialPay.splice(-1);
             }
             
@@ -180,7 +180,7 @@ odoo.define('pos_demo.custom', function (require) {
                 //     amount: 0
                 //   }
                 // ],
-                totalPay: totalPay,
+                //totalPay: totalPay,
                 barCode: 0
               };
 
