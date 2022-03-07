@@ -20,7 +20,7 @@ function registerPaymentMethod(){
       };*/
   
     //const url = 'http://localhost:12376/orders/payments_register/';
-    const url ='http://localhost:12376/orders/print_X_report/';
+    const url ='http://localhost:12376/orders/print_X_report/'
     
     fetch(url)
               .then(data => {
