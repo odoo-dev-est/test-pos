@@ -1,8 +1,12 @@
 //Register Payment method function
 function registerCashier() {
-    let ID = Number(document.getElementsByName("register_id")[0].outerText);
-    let code = Number(document.getElementsByName("cashier_code")[0].outerText);
+    let ID = document.getElementsByName("register_id")[0].outerText;
+    let code = document.getElementsByName("cashier_code")[0].outerText;
     let descriptor = document.getElementsByName("name")[0].outerText;
+    
+    ID = Number(ID.replace('.',''));
+    code = Number(code.replace('.',''));
+    
 
     const register_cashier = {
         ID,
