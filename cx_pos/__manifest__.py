@@ -16,7 +16,8 @@
         'views/pos_assets.xml',
         'views/account_tax.xml',
         'views/pos_session.xml',
-        'views/payment_methods.xml'
+        'views/payment_methods.xml',
+        'views/cashier.xml'
     ],
     'qweb':[
         'static/src/xml/pos.xml',

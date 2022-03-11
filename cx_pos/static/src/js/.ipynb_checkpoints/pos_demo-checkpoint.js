@@ -3,6 +3,7 @@ odoo.define('pos_demo.custom', function (require) {
 
     var models = require('point_of_sale.models');
     var screens = require('point_of_sale.screens');
+    var rpc = require('web.rpc');
 
     //Load printer_id and register_id fields
     models.load_fields('account.tax', ['printer_id']);
