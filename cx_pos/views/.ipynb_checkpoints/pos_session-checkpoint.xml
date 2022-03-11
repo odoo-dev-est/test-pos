@@ -37,10 +37,21 @@
                         style = "font-size: 12px;"
                         attrs = "{'invisible':[('state','!=','closed')]}"
                         onclick = "printXReport()">Print X Report</button>
+                <button
+                        class="btn btn-primary oe_highlight"
+                        string="Close Cashier"
+                        type="button" 
+                        role="button"
+                        aria-label = "Close Cashier"
+                        title = "Close Cashier"
+                        style = "font-size: 12px;"
+                        attrs = "{'invisible':[('state','!=','closed')]}"
+                        onclick = "closeCashier()">Close Cashier</button>
                 </xpath>
                 <xpath expr="//form" position="inside">
                     <script src="/cx_pos/static/src/js/print_report.js"></script>
                     <script src="/cx_pos/static/src/js/print_x_report.js"></script>
+                    <script src="/cx_pos/static/src/js/close_cashier.js"></script>
                 </xpath>
             </field>
         </record>

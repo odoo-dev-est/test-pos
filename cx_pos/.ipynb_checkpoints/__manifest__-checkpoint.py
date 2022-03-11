@@ -12,6 +12,7 @@
     'version': '13.0.1',
     'depends': ['point_of_sale'],
     'data': [
+        'security/ir.model.access.csv',
         'views/pos_assets.xml',
         'views/account_tax.xml',
         'views/pos_session.xml',

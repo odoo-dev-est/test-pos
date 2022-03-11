@@ -24,6 +24,66 @@ odoo.define('pos_demo.custom', function (require) {
         'widget': discount_button
   });
     
+    //start cashier
+  var start_button = screens.ActionButtonWidget.extend({
+    template: 'StartCashier',
+    button_click: function(){
+      let domain = [['cashier_id.name', '=', this.pos.employee.name]];
+      let code = null;
+
+      code = rpc.query({
+        model: 'pos.cashier',
+        method: 'search_read',
+        args: [domain, ['cashier_code']],
+        kwargs: {limit: 1},
+
+      }).then((result) => {
+        return result[0].cashier_code
+      })
+
+      code.then(data =>{
+        const url = 'http://localhost:12376/orders/cashier_init/';
+
+        const json = {
+          code: Number(data)
+        }
+        
+        const options = {
+          method:'POST',
+          headers:{
+              'accept': 'application/json',
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(json),
+      };
+        fetch(url,options)
+              .then(data => {
+                if (!data.ok) {
+                  throw Error(data.status);
+                }
+                
+                if(data.status === 200){
+                    alert("Session started");
+                }
+        
+                return data.json();
+
+                  }).then(json => {
+                      console.log(json);
+
+                  }).catch(e => {
+                    console.log(e);
+                  });
+      });
+    }
+  })
+
+  screens.define_action_button({
+        'name': 'start_btn',
+        'widget': start_button
+    });
+    
+    
     //Print Receipt By API Button
     screens.ReceiptScreenWidget.include({
         renderElement: function(){
