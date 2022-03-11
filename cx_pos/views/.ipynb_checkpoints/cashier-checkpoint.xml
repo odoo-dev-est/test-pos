@@ -26,7 +26,7 @@
                                 <field name="register_id"/>
                                 <field name="cashier_code"/>
                                 <button
-                                class="btn btn-primary oe_highlight"
+                                class="btn btn-primary oe_highlight oe_read_only"
                                 type="button" 
                                 role="button"
                                 aria-label = "Register Cashier"

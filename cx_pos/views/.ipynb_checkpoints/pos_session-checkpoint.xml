@@ -17,7 +17,7 @@
                         <field name="z_report_mode" attrs = "{'invisible':[('state','!=','closed')]}"/>
                     </group>
                     <button
-                        class="btn btn-primary oe_highlight"
+                        class="btn btn-primary oe_highlight oe_read_only"
                         type="button" 
                         role="button"
                         aria-label = "Print Z Report"
@@ -28,7 +28,7 @@
                 </xpath>
                 <xpath expr="//button[@id='validate_closing_control']"  position="after">
                 <button
-                        class="btn btn-primary oe_highlight"
+                        class="btn btn-primary oe_highlight oe_read_only"
                         string="Print X Report"
                         type="button" 
                         role="button"
@@ -38,7 +38,7 @@
                         attrs = "{'invisible':[('state','!=','closed')]}"
                         onclick = "printXReport()">Print X Report</button>
                 <button
-                        class="btn btn-primary oe_highlight"
+                        class="btn btn-primary oe_highlight oe_read_only"
                         string="Close Cashier"
                         type="button" 
                         role="button"
