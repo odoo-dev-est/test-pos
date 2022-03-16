@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
 
-    <!-- Discount Button -->
-    <t t-name="BtnDiscount">
-        <div class='control-button'>
-            <i class='fa fa-gift' /> 5% discount
-        </div>
-    </t>
-    
+    <!-- Start Cashier Button -->
     <t t-name="StartCashier">
         <div class='control-button'>
             <i class='fa fa' /> Start Cashier
@@ -21,6 +15,33 @@
                 <i class='fa fa-print'></i> Print Receipt
             </div>
         </t>
+    </t>
+
+    <!-- Insert Fiscal Printer Code Button -->
+    <t t-extend="PaymentScreenWidget" t-as="CustomPaymentScreenWidget">
+        <t t-jquery="div[class='payment-buttons']" t-operation="append">
+            <button t-attf-class="button popup_notes" style="width:320px;">
+                <span>Fiscal Printer Code</span>
+            </button>
+        </t>
+    </t>
+    <t t-name="PopupNote">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup popup-textinput">
+                <header class="title">
+                    <t t-esc=" widget.options.title || '' " />
+                </header>
+                <input type='text' class="popup_note" name="popup_note"></input>
+                <div class="footer">
+                    <div class="button confirm">
+                        Confirm
+                    </div>
+                    <div class="button cancel">
+                        Cancel
+                    </div>
+                </div>
+            </div>
+        </div>
     </t>
 
 </templates>

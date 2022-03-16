@@ -9,7 +9,7 @@
                 <xpath expr="//field[@name='company_id']" position="after">
                     <field name="register_id"/>
                     <button
-                        class="btn btn-primary oe_highlight"
+                        class="btn btn-primary oe_highlight oe_read_only"
                         type="button" 
                         role="button"
                         aria-label = "Register Payment Method"

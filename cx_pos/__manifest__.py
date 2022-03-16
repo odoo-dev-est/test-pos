@@ -17,10 +17,12 @@
         'views/account_tax.xml',
         'views/pos_session.xml',
         'views/payment_methods.xml',
-        'views/cashier.xml'
+        'views/cashier.xml',
+        'views/return.xml'
     ],
     'qweb':[
         'static/src/xml/pos.xml',
+        'static/src/xml/pos_return.xml'
     ],
     'installable': True
 }
