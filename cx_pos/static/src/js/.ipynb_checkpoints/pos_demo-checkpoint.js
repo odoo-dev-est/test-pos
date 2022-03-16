@@ -8,6 +8,7 @@ odoo.define('cx_pos.custom', function (require) {
 
     //Load printer_id and register_id fields
     models.load_fields('account.tax', ['printer_id']);
+    models.load_fields('pos.payment.method',['register_id']);
 
 
     //start cashier
