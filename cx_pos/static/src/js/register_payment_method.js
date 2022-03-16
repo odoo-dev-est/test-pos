@@ -5,7 +5,7 @@ function registerPaymentMethod(){
 
     //Make payment method registration request
     const payment_method = {
-        ID:id,
+        ID:Number(id),
         descriptor: payment_method_name 
     };
 

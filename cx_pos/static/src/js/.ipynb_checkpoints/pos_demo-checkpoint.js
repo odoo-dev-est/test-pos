@@ -196,7 +196,7 @@ odoo.define('cx_pos.custom', function (require) {
             //Make receipt print request
             const receipt = {
                 client: {
-                  ID: "",
+                  ID: "00.000.000",
                   bussinessName: client,
                   additionalInfo: ""
                 },
