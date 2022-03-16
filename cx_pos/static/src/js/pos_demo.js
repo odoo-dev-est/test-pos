@@ -181,7 +181,7 @@ odoo.define('cx_pos.custom', function (require) {
                         partialPay.push(
                       {
                         ID: payment_methods[pm_index].register_id,
-                        amount: Math.round(paymentlines[pl_index].amount*100);
+                        amount: Math.round(paymentlines[pl_index].amount*100)
                       }
                     )
                   }
