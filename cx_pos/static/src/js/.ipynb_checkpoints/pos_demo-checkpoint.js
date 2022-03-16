@@ -116,7 +116,7 @@ odoo.define('cx_pos.custom', function (require) {
                 //Set total discount if exists
                 if(((/Descuento/).test(product_name) || (/Discount/).test(product_name)) && price <= 0){
                   price *= -1;
-                  totalDiscount = Math.round((price/(totalPrice + price))*100);
+                  totalDiscount = Math.round((price/(totalPrice + price))*10000);
 
                 } else{
 
@@ -181,7 +181,7 @@ odoo.define('cx_pos.custom', function (require) {
                         partialPay.push(
                       {
                         ID: payment_methods[pm_index].register_id,
-                        amount: Math.round(paymentlines[pl_index].amount*10000)
+                        amount: Math.round(paymentlines[pl_index].amount*100)
                       }
                     )
                   }
