@@ -25,7 +25,7 @@ class PrintZReport(models.Model):
 
     z_report_per_date = fields.Selection(DATE_SELECTION, 
                                         string = 'Per Date',
-                                        default='si')
+                                        default='no')
     z_report_per_number = fields.Selection(NUMBER_SELECTION,
                                         string='Per Number',
                                         default='no')
