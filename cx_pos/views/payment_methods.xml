@@ -15,7 +15,7 @@
                         aria-label = "Register Payment Method"
                         title = "Register"
                         style = "font-size: 12px;"
-                        onclick = "registerPaymentMethod()">Reporte x</button>
+                        onclick = "registerPaymentMethod()">Register Payment Method</button>
                 </xpath>
                 <xpath expr="//form" position="inside">
                     <script src="/cx_pos/static/src/js/register_payment_method.js"></script>
